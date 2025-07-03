@@ -6,13 +6,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Github, Linkedin, Mail, MapPin, ExternalLink, Download, Star, Quote, Sun, Moon, Instagram } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { useRouter } from "next/navigation"
 // import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 
 export default function PersonalWebsite() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const router = useRouter()
 
   return (
     <div className="min-h-screen bg-background">
@@ -148,8 +146,8 @@ export default function PersonalWebsite() {
         <div className="flex flex-col items-center text-center space-y-8">
           <div className="relative">
             <Image
-              width={48}
-              height={48}
+              width={184}
+              height={184}
               // src="/placeholder.svg?height=200&width=200"
               src="/foto_hero.webp"
               alt="Profile"
@@ -244,7 +242,7 @@ export default function PersonalWebsite() {
           {/* Mobile: Image first, Desktop: Image second */}
           <div className="order-1 lg:order-2 flex justify-center">
             {/* <img src="https://picsum.photos/400/500" alt="About Me" className="rounded-lg shadow-2xl max-w-md w-full" /> */}
-            <Image width={48} height={48} src="/foto_about_me.webp" alt="About Me" className="rounded-lg shadow-2xl max-w-md w-full" />
+            <Image width={448} height={560} src="/foto_about_me.webp" alt="About Me" className="rounded-lg shadow-2xl max-w-md w-full" />
           </div>
         </div>
       </section>
