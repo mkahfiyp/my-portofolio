@@ -179,23 +179,21 @@ export default function PersonalWebsite() {
             </Button>
           </div>
           <div className="flex space-x-6 pt-4">
-            <Link href="https://github.com/mkahfiyp" passHref>
+            <a href="https://github.com/mkahfiyp">
               <Button variant="ghost" size="icon" className="h-12 w-12">
                 <Github className="h-6 w-6" />
               </Button>
-            </Link>
-
-            <Link href="https://www.linkedin.com/in/mkahfiyp" passHref>
+            </a>
+            <a href="https://www.linkedin.com/in/mkahfiyp">
               <Button variant="ghost" size="icon" className="h-12 w-12">
                 <Linkedin className="h-6 w-6" />
               </Button>
-            </Link>
-
-            <Link href="https://www.instagram.com/mkahfiyp" passHref>
+            </a>
+            <a href="https://www.instagram.com/mkahfiyp">
               <Button variant="ghost" size="icon" className="h-12 w-12">
                 <Instagram className="h-6 w-6" />
               </Button>
-            </Link>
+            </a>
           </div>
         </div>
       </section>
