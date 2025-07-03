@@ -727,7 +727,7 @@ export default function PersonalWebsite() {
       </section>
 
       {/* Footer */}
-      <footer className="border-t bg-muted/30">
+      {/* <footer className="border-t bg-muted/30">
         <div className="container py-8">
           <div className="flex flex-col items-center justify-between gap-4 md:flex-row">
             <div className="flex flex-col items-center gap-4 md:flex-row md:gap-2">
@@ -745,7 +745,7 @@ export default function PersonalWebsite() {
             </div>
           </div>
         </div>
-      </footer>
+      </footer> */}
     </div>
   )
 }
