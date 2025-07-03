@@ -71,6 +71,7 @@ export default function PersonalWebsite() {
               size="icon"
               className="md:hidden"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {mobileMenuOpen ? (
@@ -179,21 +180,23 @@ export default function PersonalWebsite() {
             </Button>
           </div>
           <div className="flex space-x-6 pt-4">
-            <a href="https://github.com/mkahfiyp">
-              <Button variant="ghost" size="icon" className="h-12 w-12">
+            <Link href="https://github.com/mkahfiyp" passHref aria-label="Kunjungi profil GitHub saya">
+              <Button variant="ghost" size="icon" className="h-12 w-12" aria-label="Kunjungi profil GitHub saya">
                 <Github className="h-6 w-6" />
               </Button>
-            </a>
-            <a href="https://www.linkedin.com/in/mkahfiyp">
-              <Button variant="ghost" size="icon" className="h-12 w-12">
+            </Link>
+
+            <Link href="https://www.linkedin.com/in/mkahfiyp" passHref aria-label="Kunjungi profil LinkedIn saya">
+              <Button variant="ghost" size="icon" className="h-12 w-12" aria-label="Kunjungi profil LinkedIn saya">
                 <Linkedin className="h-6 w-6" />
               </Button>
-            </a>
-            <a href="https://www.instagram.com/mkahfiyp">
-              <Button variant="ghost" size="icon" className="h-12 w-12">
+            </Link>
+
+            <Link href="https://www.instagram.com/mkahfiyp" passHref aria-label="Kunjungi profil Instagram saya">
+              <Button variant="ghost" size="icon" className="h-12 w-12" aria-label="Kunjungi profil Instagram saya">
                 <Instagram className="h-6 w-6" />
               </Button>
-            </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -329,8 +332,8 @@ export default function PersonalWebsite() {
             <Card className="group hover:shadow-xl transition-all duration-300">
               <div className="relative overflow-hidden">
                 <Image
-                  width={48}
-                  height={48}
+                  width={365}
+                  height={192}
                   src="https://picsum.photos/id/237/500/200"
                   alt="E-commerce Platform"
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -357,8 +360,8 @@ export default function PersonalWebsite() {
             <Card className="group hover:shadow-xl transition-all duration-300">
               <div className="relative overflow-hidden">
                 <Image
-                  width={48}
-                  height={48}
+                  width={365}
+                  height={192}
                   src="https://picsum.photos/id/237/500/200"
                   alt="Task Management App"
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -385,8 +388,8 @@ export default function PersonalWebsite() {
             <Card className="group hover:shadow-xl transition-all duration-300">
               <div className="relative overflow-hidden">
                 <Image
-                  width={48}
-                  height={48}
+                  width={365}
+                  height={192}
                   src="https://picsum.photos/id/237/500/200"
                   alt="Learning Management System"
                   className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
@@ -527,8 +530,8 @@ export default function PersonalWebsite() {
               <CardHeader>
                 <div className="flex items-center space-x-4">
                   <Image
-                    width={48}
-                    height={48}
+                    width={365}
+                    height={192}
                     src="/placeholder.svg?height=60&width=60"
                     alt="Sarah Johnson"
                     className="w-12 h-12 rounded-full"
@@ -556,8 +559,8 @@ export default function PersonalWebsite() {
               <CardHeader>
                 <div className="flex items-center space-x-4">
                   <Image
-                    width={48}
-                    height={48}
+                    width={365}
+                    height={192}
                     src="/placeholder.svg?height=60&width=60"
                     alt="Michael Chen"
                     className="w-12 h-12 rounded-full"
@@ -584,7 +587,7 @@ export default function PersonalWebsite() {
               <Quote className="absolute top-4 right-4 h-8 w-8 text-primary/20" />
               <CardHeader>
                 <div className="flex items-center space-x-4">
-                  <Image width={48} height={48} src="/placeholder.svg?height=60&width=60" alt="Lisa Wong" className="w-12 h-12 rounded-full" />
+                  <Image width={365} height={192} src="/placeholder.svg?height=60&width=60" alt="Lisa Wong" className="w-12 h-12 rounded-full" />
                   <div>
                     <CardTitle className="text-lg">Lisa Wong</CardTitle>
                     <CardDescription>Product Manager, InnovateLab</CardDescription>
@@ -641,20 +644,20 @@ export default function PersonalWebsite() {
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold">Follow Me</h3>
                 <div className="flex space-x-4">
-                  <Link href="https://github.com/mkahfiyp" passHref>
-                    <Button variant="outline" size="icon" className="h-12 w-12 bg-transparent">
+                  <Link href="https://github.com/mkahfiyp" passHref aria-label="Kunjungi profil GitHub saya">
+                    <Button variant="outline" size="icon" className="h-12 w-12 bg-transparent" aria-label="Kunjungi profil GitHub saya">
                       <Github className="h-6 w-6" />
                     </Button>
                   </Link>
 
-                  <Link href="https://www.linkedin.com/in/mkahfiyp" passHref>
-                    <Button variant="outline" size="icon" className="h-12 w-12 bg-transparent">
+                  <Link href="https://www.linkedin.com/in/mkahfiyp" passHref aria-label="Kunjungi profil LinkedIn saya">
+                    <Button variant="outline" size="icon" className="h-12 w-12 bg-transparent" aria-label="Kunjungi profil LinkedIn saya">
                       <Linkedin className="h-6 w-6" />
                     </Button>
                   </Link>
 
-                  <Link href="https://www.instagram.com/mkahfiyp" passHref>
-                    <Button variant="outline" size="icon" className="h-12 w-12 bg-transparent">
+                  <Link href="https://www.instagram.com/mkahfiyp" passHref aria-label="Kunjungi profil Instagram saya">
+                    <Button variant="outline" size="icon" className="h-12 w-12 bg-transparent" aria-label="Kunjungi profil Instagram saya">
                       <Instagram className="h-6 w-6" />
                     </Button>
                   </Link>
