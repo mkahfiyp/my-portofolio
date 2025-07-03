@@ -220,7 +220,7 @@ export default function PersonalWebsite() {
                 saya juga senang mengikuti perkembangan dunia teknologi, membaca studi kasus pengembangan sistem, dan terus belajar untuk meningkatkan keterampilan saya. Bagi saya, menjadi developer bukan hanya soal menulis kode, tapi juga tentang bagaimana memberikan dampak positif melalui teknologi.
               </p>
             </div>
-            <div className="grid grid-cols-2 gap-6">
+            {/* <div className="grid grid-cols-2 gap-6">
               <div>
                 <h4 className="font-semibold text-lg mb-2">50+</h4>
                 <p className="text-muted-foreground">Projects Completed</p>
@@ -237,7 +237,7 @@ export default function PersonalWebsite() {
                 <h4 className="font-semibold text-lg mb-2">100%</h4>
                 <p className="text-muted-foreground">Client Satisfaction</p>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* Mobile: Image first, Desktop: Image second */}
