@@ -69,6 +69,7 @@ function ScrollToTop() {
       size="icon"
       className={`fixed bottom-8 right-8 z-50 rounded-full shadow-lg transition-all duration-300 hover:scale-110 ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"
         }`}
+      aria-label="button-scroll-to-top"
     >
       <ArrowUp className="h-5 w-5" />
     </Button>
