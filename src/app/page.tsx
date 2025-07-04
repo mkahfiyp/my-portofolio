@@ -156,6 +156,7 @@ export default function PersonalWebsite() {
               size="icon"
               className="md:hidden hover:scale-110 transition-transform duration-200"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label={mobileMenuOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
             >
               <svg
                 className="h-6 w-6 transition-transform duration-200"
@@ -186,6 +187,7 @@ export default function PersonalWebsite() {
                 className={`block w-full text-left py-2 text-sm font-medium transition-all duration-200 hover:text-primary hover:translate-x-2 capitalize ${activeSection === section ? "text-primary" : ""
                   }`}
                 style={{ animationDelay: `${index * 50}ms` }}
+                aria-label={`Go to ${section} section`}
               >
                 {section === "hero" ? "Home" : section}
               </button>
