@@ -110,6 +110,13 @@ export default function PersonalWebsite() {
       element.scrollIntoView({ behavior: "smooth" })
     }
   }
+  const handleDownload = () => {
+    const link = document.createElement('a');
+    link.href = 'https://drive.google.com/uc?export=download&id=1XjF0nL-sR9IybAGm-T7zYiuQpUmEKmy6';
+    link.download = 'CV_M_KAHFI_Y_P.pdf';
+    link.click();
+  };
+
 
   return (
     <div className="min-h-screen bg-background overflow-x-hidden">
@@ -247,6 +254,7 @@ export default function PersonalWebsite() {
               variant="outline"
               size="lg"
               className="text-base sm:text-lg px-6 sm:px-8 bg-transparent flex-1 hover:scale-105 transition-all duration-200 hover:shadow-lg"
+              onClick={handleDownload}
             >
               <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
               Download CV
@@ -419,22 +427,32 @@ export default function PersonalWebsite() {
           <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
             {[
               {
+                url: "/project-company-sikumbang-tapera.webp",
+                title: "Company Sikumbang Tapera",
+                description: "Membangun ulang website dari sikumbang tapera yang dimiliki oleh Kementerian Perumahan dan Kawasan Permukiman (PKP)",
+                technologies: ["Next.JS", "React", "Tailwind CSS"],
+                url_project: "https://company-sikumbang-tapera.vercel.app/",
+              },
+              {
                 url: "/project-blog-app.webp",
                 title: "Blog App",
                 description: "A modern blog platform with dynamic content management and responsive UI.",
                 technologies: ["Next.js", "React", "Tailwind CSS", "Markdown"],
+                url_project: "",
               },
               {
                 url: "/project-todo-app.webp",
                 title: "Todo App",
                 description: "A simple and intuitive task management app with real-time updates and persistent storage.",
                 technologies: ["React", "Firebase", "Tailwind CSS"],
+                url_project: "",
               },
               {
                 url: "/project-company.webp",
                 title: "Company Profile",
                 description: "A professional company profile website showcasing services, team, and contact information.",
                 technologies: ["Next.js", "React", "Tailwind CSS"],
+                url_project: "",
               }
             ].map((project, index) => (
               <Card
@@ -453,10 +471,12 @@ export default function PersonalWebsite() {
                     className="w-full h-48 object-cover object-top group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center justify-center">
-                    <Button variant="secondary" size="sm" className="hover:scale-110 transition-transform duration-200">
-                      <ExternalLink className="mr-2 h-4 w-4" />
-                      View Project
-                    </Button>
+                    <Link href={project.url_project}>
+                      <Button variant="secondary" size="sm" className="hover:scale-110 transition-transform duration-200 hover:cursor-pointer">
+                        <ExternalLink className="mr-2 h-4 w-4" />
+                        View Project
+                      </Button>
+                    </Link>
                   </div>
                 </div>
                 <CardHeader>
@@ -733,7 +753,7 @@ export default function PersonalWebsite() {
                 </div>
               </div>
             </div>
-            <Card className="hover:shadow-xl transition-all duration-300 animate-in fade-in slide-in-from-right duration-700">
+            <Card className="hover:shadow-xl transition-all animate-in fade-in slide-in-from-right duration-700">
               <CardHeader>
                 <CardTitle>Send me a message</CardTitle>
                 <CardDescription>I&apos;ll get back to you within 24 hours</CardDescription>
