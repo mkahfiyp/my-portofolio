@@ -112,7 +112,8 @@ export default function PersonalWebsite() {
   }
   const handleDownload = () => {
     const link = document.createElement('a');
-    link.href = 'https://drive.google.com/uc?export=download&id=1XjF0nL-sR9IybAGm-T7zYiuQpUmEKmy6';
+    // link.href = 'https://drive.google.com/uc?export=download&id=1XjF0nL-sR9IybAGm-T7zYiuQpUmEKmy6';
+    link.href = 'https://drive.google.com/uc?export=download&id=1IWouu0UfoaAJSimBPlQHgk8x65Lm-LVi';
     link.download = 'CV_M_KAHFI_Y_P.pdf';
     link.click();
   };
