@@ -1,20 +1,26 @@
 export const testimonialData = [
     {
-        name: "Michael Tan",
-        role: "Project Manager, BrightTech Solutions",
+        // name: "Michael Tan",
+        name: "...",
+        // role: "Project Manager, BrightTech Solutions",
+        role: "Fullstack Developer",
         testimonial:
-            "Bekerja bareng Kahfi selalu jadi pengalaman yang menyenangkan. Dia cepat tanggap, punya ide-ide cerdas, dan nggak pernah bikin tim kelabakan. Pokoknya mantap!",
+            "Kerja bareng Kahfi itu selalu lancar. Dia cepat nangkep kebutuhan project, komunikatif, dan nggak ribet kalau diajak revisi.",
     },
     {
-        name: "Alicia Gomez",
-        role: "UX Designer, CreativeNest",
+        // name: "Alicia Gomez",
+        name: "...",
+        // role: "UX Designer, CreativeNest",
+        role: "Frontend Developer",
         testimonial:
-            "Kahfi itu tipe developer yang enak banget diajak kerja sama. Desain yang aku buat bisa dia realisasikan dengan mulus, dan dia juga terbuka buat diskusi. Seru banget kerja bareng dia!",
+            "Kahfi salah satu developer yang paling enak diajak kolaborasi. Desain dari sisi frontend bisa dia implementasikan persis kayak konsep awal, dan dia juga aktif kasih masukan biar hasilnya lebih optimal.",
     },
     {
-        name: "David Lee",
-        role: "CTO, Nova Digital",
+        // name: "David Lee",
+        name: "...",
+        // role: "CTO, Nova Digital",
+        role: "UI/UX Designer",
         testimonial:
-            "Kalau butuh orang yang bisa diandalkan dan ngerti teknis, Kahfi jawabannya. Santai tapi serius pas kerja, dan hasil kerjanya selalu rapi. Recommended banget!",
+            "Kahfi orangnya santai tapi profesional. Setiap kali kerja bareng, dia selalu ngerti arah desain dan bisa nerjemahin ide jadi hasil yang clean dan fungsional. Kualitasnya konsisten banget.",
     },
 ]

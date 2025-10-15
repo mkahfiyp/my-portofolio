@@ -1,8 +1,60 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Github, Instagram, Linkedin, Mail, MapPin } from "lucide-react";
+import { Github, Instagram, Linkedin, Mail, MapPin, Send } from "lucide-react";
+import { useState } from "react";
 
 export default function ContactSection() {
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        subject: '',
+        message: ''
+    });
+    const [isLoading, setIsLoading] = useState(false);
+    const [status, setStatus] = useState<{ type: 'success' | 'error' | null, message: string }>({
+        type: null,
+        message: ''
+    });
+
+    const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+        const { id, value } = e.target;
+        setFormData(prev => ({
+            ...prev,
+            [id]: value
+        }));
+    };
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsLoading(true);
+        setStatus({ type: null, message: '' });
+
+        try {
+            const response = await fetch('/api/sendemail', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(formData),
+            });
+
+            const result = await response.json();
+
+            if (response.ok) {
+                setStatus({ type: 'success', message: result.message });
+                setFormData({ name: '', email: '', subject: '', message: '' });
+            } else {
+                setStatus({ type: 'error', message: result.error });
+            }
+        } catch (error) {
+            setStatus({ type: 'error', message: 'Terjadi kesalahan. Silakan coba lagi.' });
+        } finally {
+            setIsLoading(false);
+        }
+    };
+
     return (
         <section id="contact" className="px-[5%] py-24">
             <div className="space-y-12">
@@ -93,7 +145,7 @@ export default function ContactSection() {
                             </CardDescription>
                         </CardHeader>
                         <CardContent>
-                            <form className="space-y-6">
+                            <form onSubmit={handleSubmit} className="space-y-6">
                                 <div className="grid gap-4 sm:grid-cols-2">
                                     {[
                                         {
@@ -120,6 +172,9 @@ export default function ContactSection() {
                                                 id={field.id}
                                                 type={field.type}
                                                 placeholder={field.placeholder}
+                                                value={formData[field.id as keyof typeof formData]}
+                                                onChange={handleInputChange}
+                                                required
                                                 className="w-full px-3 py-3 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background text-base transition-all duration-200 hover:border-primary/50"
                                             />
                                         </div>
@@ -133,6 +188,9 @@ export default function ContactSection() {
                                         id="subject"
                                         type="text"
                                         placeholder="Project inquiry"
+                                        value={formData.subject}
+                                        onChange={handleInputChange}
+                                        required
                                         className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary bg-background transition-all duration-200 hover:border-primary/50"
                                     />
                                 </div>
@@ -144,15 +202,40 @@ export default function ContactSection() {
                                         id="message"
                                         rows={5}
                                         placeholder="Tell me about your project..."
+                                        value={formData.message}
+                                        onChange={handleInputChange}
+                                        required
                                         className="w-full px-3 py-2 border border-input rounded-md focus:outline-none focus:ring-2 focus:ring-primary resize-none bg-background transition-all duration-200 hover:border-primary/50"
                                     />
                                 </div>
+
+                                {/* Status Message */}
+                                {status.type && (
+                                    <div className={`p-3 rounded-md text-sm ${status.type === 'success'
+                                        ? 'bg-green-100 text-green-800 border border-green-200'
+                                        : 'bg-red-100 text-red-800 border border-red-200'
+                                        }`}>
+                                        {status.message}
+                                    </div>
+                                )}
+
                                 <Button
                                     type="submit"
-                                    className="w-full hover:scale-105 transition-all duration-200 hover:shadow-lg"
+                                    disabled={isLoading}
+                                    className="w-full hover:scale-105 transition-all duration-200 hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed"
                                     size="lg"
                                 >
-                                    Send Message
+                                    {isLoading ? (
+                                        <div className="flex items-center space-x-2">
+                                            <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+                                            <span>Sending...</span>
+                                        </div>
+                                    ) : (
+                                        <div className="flex items-center space-x-2">
+                                            <Send className="w-4 h-4" />
+                                            <span>Send Message</span>
+                                        </div>
+                                    )}
                                 </Button>
                             </form>
                         </CardContent>
