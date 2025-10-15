@@ -1,0 +1,78 @@
+export const experienceData = [
+    {
+        title: "Bootcamp Full Stack Web Development",
+        company: "Purwadhika Digital Technology School • Surabaya",
+        period: "May 2025 - Present",
+        current: true,
+        borderColor: "border-l-primary",
+        // achievements: [
+        //     "Mengikuti program intensif pengembangan web full stack selama beberapa bulan dengan fokus praktik langsung",
+        //     "Mempelajari teknologi seperti HTML, CSS, JavaScript, TypeScript, React.js, Tailwind CSS, Node.js, NextJS, PostgreSQL, Git, GitHub, dan Vercel",
+        //     "Membangun proyek web end-to-end dari frontend hingga backend sebagai bagian dari kurikulum",
+        //     "Meningkatkan kemampuan problem solving, debugging, dan kolaborasi tim dalam lingkungan simulasi kerja nyata",
+        // ],
+        achievements: [
+            "Completed an intensive full-stack web development program with a strong focus on hands-on practice.",
+            "Learned and applied technologies such as HTML, CSS, JavaScript, TypeScript, React.js, Tailwind CSS, Node.js, Next.js, PostgreSQL, Git, GitHub, and Vercel.",
+            "Built end-to-end web projects covering both frontend and backend as part of the curriculum.",
+            "Improved problem-solving, debugging, and team collaboration skills in a real-world simulated work environment.",
+        ],
+    },
+    {
+        title: "Informatics Engineering Student",
+        company: "Universitas Surabaya • Surabaya",
+        period: "2020 - 2025",
+        current: false,
+        borderColor: "border-l-red-500",
+        // achievements: [
+        //     "Menempuh pendidikan di Program Studi Teknik Informatika, Universitas Surabaya (UBAYA",
+        //     "Mempelajari dasar-dasar pemrograman menggunakan bahasa seperti C, Java, dan Python",
+        //     "Mempelajari berbagai mata kuliah inti seperti Struktur Data, Pemrograman Web, Basis Data, dan Kecerdasan Buatan",
+        //     "Mengerjakan tugas akhir dengan topik &quot;Pembuatan Aplikasi Penyewaan Lapangan Olahraga di Surabaya dengan Implementasi Algoritma Collaborative Filtering.&quot",
+        // ],
+        achievements: [
+            "Studied in the Informatics Engineering program at the University of Surabaya (UBAYA).",
+            "Learned the fundamentals of programming using languages such as C, Java, and Python.",
+            "Completed core courses including Data Structures, Web Programming, Databases, and Artificial Intelligence.",
+            "Developed a final project titled “Sports Field Rental Application in Surabaya with the Implementation of a Collaborative Filtering Algorithm.”",
+        ],
+    },
+    {
+        title: "Web Developer Intern",
+        company: "Information Systems Study Program, UBAYA • Surabaya",
+        period: "2024",
+        current: false,
+        borderColor: "border-l-orange-500",
+        // achievements: [
+        //     "Menjalani internship sebagai Web Developer dalam tim pengembangan website Program Studi Sistem Informasi UBAYA",
+        //     "Berperan dalam pengembangan dan pemeliharaan fitur-fitur menggunakan WordPress",
+        //     "Berkoordinasi langsung dengan dosen dan staf untuk menganalisis kebutuhan sistem dan mengimplementasikan solusi yang relevan",
+        //     "Meningkatkan pengalaman dalam pengembangan aplikasi nyata serta memahami alur kerja profesional di lingkungan akademik",
+        // ],
+        achievements: [
+            "Completed an internship as a Web Developer in the Information Systems Department website development team at the University of Surabaya (UBAYA).",
+            "Contributed to the development and maintenance of website features using WordPress.",
+            "Collaborated directly with lecturers and staff to analyze system requirements and implement appropriate solutions.",
+            "Gained hands-on experience in real-world application development and a better understanding of professional workflows in an academic environment.",
+        ],
+    },
+    {
+        title: "IT Support Internship",
+        company: "PT. Indo Bismar • Surabaya",
+        period: "2019",
+        current: false,
+        borderColor: "border-l-green-500",
+        // achievements: [
+        //     "Melaksanakan praktik kerja lapangan (PKL) sebagai siswa SMK jurusan Teknik Komputer dan Jaringan",
+        //     "Membantu proses instalasi dan perawatan perangkat keras dan perangkat lunak di lingkungan kantor",
+        //     "Melakukan troubleshooting dasar pada jaringan komputer dan perangkat pengguna",
+        //     "Mendampingi staf IT dalam kegiatan operasional harian dan dokumentasi teknis",
+        // ],
+        achievements: [
+            "Completed a field internship as a Vocational High School student majoring in Computer and Network Engineering.",
+            "Assisted in the installation and maintenance of hardware and software within the office environment.",
+            "Performed basic troubleshooting on computer networks and user devices.",
+            "Supported IT staff in daily operations and technical documentation activities.",
+        ],
+    },
+]
