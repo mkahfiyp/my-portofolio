@@ -2,8 +2,8 @@ export const experienceData = [
     {
         title: "Bootcamp Full Stack Web Development",
         company: "Purwadhika Digital Technology School • Surabaya",
-        period: "May 2025 - Present",
-        current: true,
+        period: "May 2025 - Oct 2025",
+        current: false,
         borderColor: "border-l-primary",
         // achievements: [
         //     "Mengikuti program intensif pengembangan web full stack selama beberapa bulan dengan fokus praktik langsung",
