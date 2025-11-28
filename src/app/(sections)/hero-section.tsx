@@ -11,7 +11,8 @@ export default function HeroSection() {
         // link.href = 'https://drive.google.com/uc?export=download&id=1XjF0nL-sR9IybAGm-T7zYiuQpUmEKmy6';
         // link.href = "https://drive.google.com/uc?export=download&id=1IWouu0UfoaAJSimBPlQHgk8x65Lm-LVi";
         // link.href = "https://drive.google.com/uc?export=download&id=16C2H4l5L9kNUkqBYDvAIG6GfT3-MIkxQ";
-        link.href = "https://drive.google.com/uc?export=download&id=1ehjoY6DMadWnFDpBTeIOpCLtoJuFJETG";
+        // link.href = "https://drive.google.com/uc?export=download&id=1ehjoY6DMadWnFDpBTeIOpCLtoJuFJETG";
+        link.href = "https://drive.google.com/uc?export=download&id=1YQuViQI0nkIhHeVKwI89lwt-TrlwTEbo";
         link.download = "CV_M_KAHFI_Y_P.pdf";
         link.click();
     };
